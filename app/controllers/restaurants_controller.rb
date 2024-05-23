@@ -30,7 +30,6 @@ class RestaurantsController < ApplicationController
   def destroy
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
-    # No need for app/views/restaurants/destroy.html.erb
     redirect_to restaurants_path, status: :see_other
   end
 

@@ -1,0 +1,8 @@
+
+<p><strong>Review</strong></p>
+<%= @review.content %>
+<p>Rated:<%= review.rating%></p>
+<%= link_to "Delete",
+  review_path(@review),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

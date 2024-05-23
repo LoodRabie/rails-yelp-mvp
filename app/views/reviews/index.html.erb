@@ -1,0 +1,13 @@
+<p><strong>Reviews</strong></p>
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= link_to review.id, review_path(review) %>
+    <%= review.content %>
+      <p>Rated:<%= review.rating%></p>
+      <%= link_to "Delete",
+        review_path(review),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %></li>
+  <% end %>
+</ul>
+<br>
